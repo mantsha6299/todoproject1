@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import productsData from "./productsData";
 
 function CardPage(){
+
+  const [dateTime,setDateTime] = useState("");
+
+   useEffect(() =>{
+  const interval = setInterval(() => { 
+  const date = new Date();
+  const formetedDate = date.toLocaleDateString();
+  const formetedTime = date.toLocaleTimeString();
+  setDateTime(`${formetedDate} - ${formetedTime}`)
+  },1000)
+   return () => clearInterval(interval)
+
+ },[])
   return (
   <> 
   {/* <div className="p-6 max-w-3xl mx-auto">
@@ -8,8 +22,9 @@ function CardPage(){
 
     {/* //products */}
     <div className=" text-pink-400 grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      <h1 className="bg-black text-2xl text-red-600">{dateTime}</h1>
      {productsData.map((item) =>{
-      return(
+      return(       
         <div key={item.id} className="border bg-blue-400 p-4 rounded shadow">
         <img 
         src={item.image}
@@ -23,6 +38,7 @@ function CardPage(){
      })}
     </div>  
      <button className="border bg-pink-900  text-2xl text-black p-2 px-12 py-6 rounded-full ">me</button>
+
   </>)
 }
 export default CardPage;
