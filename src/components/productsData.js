@@ -35,6 +35,13 @@ const productsData = [
         size :"M",
          image:"images/product17.jpg",
     },
+     {
+        id:"5",
+        name:"shirt",
+        price:"2500",
+        size :"M",
+         image:"images/product18.jpg",
+    },
 ]
 export default productsData;
     

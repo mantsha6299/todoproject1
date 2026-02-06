@@ -22,6 +22,7 @@ function CardPage(){
       )
      })}
     </div>  
+     <button className="border bg-pink-900  text-2xl text-black p-2 px-12 py-6 rounded-full ">me</button>
   </>)
 }
 export default CardPage;
