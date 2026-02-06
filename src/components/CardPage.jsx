@@ -7,7 +7,7 @@ function CardPage(){
     <h1 className="text-2xl font-bold mb-4">Simple card</h1> */}
 
     {/* //products */}
-    <div className=" text-pink-400 grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+    <div className=" text-pink-red grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
      {productsData.map((item) =>{
       return(
         <div key={item.id} className="border p-4 rounded shadow">
