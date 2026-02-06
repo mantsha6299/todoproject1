@@ -10,7 +10,7 @@ function CardPage(){
     <div className=" text-pink-400 grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
      {productsData.map((item) =>{
       return(
-        <div key={item.id} className="border p-4 rounded shadow">
+        <div key={item.id} className="border bg-blue-400 p-4 rounded shadow">
         <img 
         src={item.image}
         alt={item.name}
